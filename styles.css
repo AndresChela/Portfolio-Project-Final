@@ -55,7 +55,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    height: 80vh;
+    height: 58vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,4 +99,24 @@ nav {
 
 .btn:hover {
     opacity: 0.8;
+}
+/* Social Media Icons */
+
+.social-container {
+    display: flex;             /* Enables Flexbox */
+    justify-content: center;   /* Centers horizontally */
+    align-items: center;       /* Centers vertically */
+    gap: 30px;                /* Space between icons */
+    
+}
+
+.social-icon {
+    font-size: 40px;           /* Size of the icons */
+    color: #333;               /* Initial dark color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+.social-icon:hover {
+    color: #5fdb5f;            /* Light green on hover */
 }
