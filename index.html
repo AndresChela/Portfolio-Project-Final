@@ -17,8 +17,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#">RESUME</a></li>
-                <li><a href="#">PROJECTS</a></li>
-                <li><a href="#">CERTS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#skills">CERTS</a></li>
             </ul>
         </nav>
     </header>
@@ -27,18 +27,65 @@
     <div class="hero-content">
         <h1>Hello<span class="dot">.</span> I'm <span class="name-highlight">Andres Chela</span><span class="dot">.</span></h1>
         <p>Google Certified IT Specialist | Azure & Github Projects</p>
-        <a href="#" class="btn">VIEW MY WORK</a>
+        <a href="#" class="btn">GET MY CV</a>
     </div>
 </main>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <div class="social-container">
-    <a href="https://google.com" target="_blank" class="social-icon">
+    <a href="https://github.com/AndresChela" target="_blank" class="social-icon">
         <i class="fa-brands fa-github"></i>
     </a>
     <a href="https://google.com" target="_blank" class="social-icon">
         <i class="fa-brands fa-linkedin"></i>
     </a>
 </div>
+<section id="projects" class="projects-section">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-container">
+        
+        <div class="project-card">
+            <h3>Proxmox Home-Lab</h3>
+            <p>A full-scale virtualization environment running Win11 Enterprise and TrueNAS. Configured with VirtIO drivers for optimized storage performance.</p>
+            <div class="tags">
+                <span>Virtualization</span>
+                <span>Proxmox</span>
+                <span>Networking</span>
+            </div>
+            <a href="https://google.com" class="project-link">View Details</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Automated Portfolio</h3>
+            <p>A custom-coded site utilizing a CI/CD pipeline. Every commit to GitHub automatically triggers a build and deployment to the live server.</p>
+            <div class="tags">
+                <span>GitHub Actions</span>
+                <span>CI/CD</span>
+                <span>Automation</span>
+            </div>
+            <a href="https://github.com/AndresChela/Portfolio-Project-Final" class="project-link">View Code</a>
+        </div>
+
+    </div>
+</section>
+<section id="skills" class="skills-section">
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3>Certifications</h3>
+            <ul>
+                <li>Google IT Support Professional</li>
+                <li>CompTIA A+ (In Progress)</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Technical Proficiencies</h3>
+            <ul>
+                <li><strong>Networking:</strong> TCP/UDP, DNS, DHCP, SNMP</li>
+                <li><strong>Cloud/Server:</strong> Proxmox, TrueNAS, Windows 11 Enterprise</li>
+                <li><strong>DevOps/Web:</strong> CI/CD Pipelines, GitHub, HTML/CSS/JS</li>
+            </ul>
+        </div>
+    </div>
+</section>
 </body>
 </html>

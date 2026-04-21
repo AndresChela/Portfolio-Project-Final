@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f9f9f9; /* Off-white background from image */
@@ -77,7 +79,7 @@ nav {
     font-size: 1.5rem;
     font-weight: 600;
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 .name-highlight {
     color: #3490f3; /* This is a professional "Google" blue */
@@ -118,5 +120,138 @@ nav {
 }
 
 .social-icon:hover {
-    color: #5fdb5f;            /* Light green on hover */
+    color: #90ee90;            /* Light green on hover */
+}
+
+/* Section2 */
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 211px;
+        font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+}
+
+/* Flexbox Container */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows cards to stack on mobile */
+    gap: 25px;       /* Space between cards */
+    padding: 20px;
+}
+
+/* The Project Cards */
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    width: 350px;
+    
+    /* Slightly curved edges */
+    border-radius: 8px; 
+    
+    /* Subtle shadow to make them pop */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Moves up slightly on hover */
+}
+
+/* Tags Styling */
+.tags {
+    margin: 15px 0;
+}
+
+.tags span {
+    background: #f0f0f0;
+    color: #555;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* Link Styling */
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Skills Section Styling */
+.skills-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Subtle contrast from the projects section */
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px; /* Matching the slight curve */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #90ee90; /* That light green for consistency */
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* List styling */
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Contact Footer Styling */
+.contact-footer {
+    text-align: center;
+    padding: 80px 20px;
+    background: #2d3436; /* Dark background for a strong finish */
+    color: white;
+}
+
+.contact-footer .btn {
+    background-color: #90ee90; /* Your light green theme */
+    color: #2d3436;
+    padding: 15px 40px;
+    font-weight: bold;
+    border-radius: 30px; /* Fully rounded button for contrast */
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.contact-footer .btn:hover {
+    background-color: #76c776;
+    transform: scale(1.05);
 }
