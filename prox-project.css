@@ -1,0 +1,296 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.top-nav {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #888; /* Subtle gray */
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.back-button .arrow {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.back-button:hover {
+    color: #4af626; /* Terminal green on hover */
+}
+
+/* Optional: Add a subtle border bottom to separate the nav from your Phase 2 content */
+.top-nav {
+    border-bottom: 1px solid #222;
+}
+
+/* Entire background is set to black */
+body {
+        background-color: #1B1F22;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+#list-font {
+    font-family: Source Code Pro, monospace;
+    font-weight: 800;
+
+}
+                    .system-report {
+    background-color: #050505; /* Slightly offset from pure black */
+    border: 1px solid #1a1a1a;
+    padding: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.report-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 10px;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: #00ff00; /* Power-on green */
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+.report-title {
+    font-size: 0.75rem;
+    color: #837d7d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.report-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.key {
+    color: #888;
+    flex-shrink: 0;
+}
+
+.dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted #222;
+    margin: 0 10px;
+}
+
+.value {
+    color: #ffffff;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* Subtle hover effect to make it feel interactive */
+.report-row:hover .value {
+    color: #00ff00;
+    transition: color 0.2s ease;
+}
+/* Container pulls content to the center */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #eeeeee;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+/* Photo Gallery Placeholder */
+.gallery-placeholder {
+    background-color: #1a1a1a;
+    border: 1px dashed #444;
+    height: 300px;
+    display: block;
+    margin: 30px 0;
+    position: relative;
+}
+
+.gallery-placeholder::after {
+    content: "[ IMAGE GALLERY PLACEHOLDER ]";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #555;
+    font-weight: bold;
+}
+
+/* Subtle Links in Brackets */
+.link-bracket {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.link-bracket a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-bracket a:hover {
+    color: #ffffff;
+}
+
+.link-bracket::before {
+    content: "[ ";
+    color: #444;
+}
+
+.link-bracket::after {
+    content: " ]";
+    color: #444;
+}
+
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+}
+/* Responsive Image */
+.photo-container {
+    width: 100%;       /* Takes up the width of its parent */
+    max-width: 500px;  /* Limits the size so it doesn't get too big */
+    margin: 20px auto; /* Centers the container */
+}
+
+.responsive-img {
+    width: 80%;       /* Forces the image to fill the 500px container */
+    height: auto;      /* Automatically calculates the height to keep it 4:3 */
+    display: block;    /* Removes extra spacing at the bottom */
+    border: 1px solid #333; 
+    border-radius: 8px; /* This is a subtle, professional curve */
+}
+/* Container for each step */
+.log-entry {
+    margin-bottom: 40px;
+    border-left: 3px solid #333;
+    padding-left: 20px;
+}
+
+/* Header for each log */
+.log-label {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Terminal-style command box */
+.command-box {
+    background-color: #0d0d0d;
+    color: #4af626; /* Matrix/Terminal Green */
+    font-family: 'Courier New', monospace;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #222;
+}
+
+/* Placeholder for your PNGs */
+.placeholder-image {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 2px dashed #444;
+    height: 300px; /* Adjust based on your 4:3 preference */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* Your requested curve */
+    margin-bottom: 15px;
+}
+
+/* Description text */
+.log-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.log-desc code {
+    background: #222;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 650px; /* Optimal width for reading Proxmox settings */
+    margin: 20px 0;
+    border: 1px solid #333;
+    border-radius: 8px; /* Professional curve */
+    overflow: hidden;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Improves clarity for text-heavy screenshots */
+    image-rendering: -webkit-optimize-contrast; 
+}
+/* Responsive Adjustments for Mobile */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .container { padding: 20px 15px; }
+    p { font-size: 1rem; }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prox-project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="meta">Tuesday, March 17, 2026 • Project Log</div>
+            <h1>Architectural Overview: A High-Performance Proxmox Virtualization Environment</h1>
+            <nav class="top-nav">
+    <a href="index.html" class="back-button">
+        <span class="arrow">&larr;</span> Return to Main Portfolio
+    </a>
+</nav>
+        </header>
+
+        <section>
+            <h2>Phase 1: Hardware & Hypervisor</h2>
+            <p>
+                The foundation of this project began with a Dell Optiplex 5040 SFF. 
+                Converting a standard desktop into a Type-1 Hypervisor which
+                 requires specific BIOS adjustments for automatic startup and virtualization, primarily enabling
+                  VT-x and ensuring the boot order is optimized for the Proxmox environment. 
+            </p>
+            <div class="link-bracket">
+                <p id="list-font">Hardware Specs</p>
+                    <div class="system-report">
+    <div class="report-header">
+        <span class="status-indicator"></span>
+        <span class="report-title">Hardware Configuration Log</span>
+    </div>
+    
+    <div class="report-row">
+        <span class="key">CHASSIS</span>
+        <span class="dots"></span>
+        <span class="value">Dell Optiplex 7050 SFF</span>
+    </div>
+    <div class="report-row">
+        <span class="key">PROCESSOR</span>
+        <span class="dots"></span>
+        <span class="value">Intel Core i5-7500 @ 3.40GHz</span>
+    </div>
+    <div class="report-row">
+        <span class="key">GRAPHICS</span>
+        <span class="dots"></span>
+        <span class="value">NVIDIA Dedicated GPU</span>
+    </div>
+    <div class="report-row">
+        <span class="key">STORAGE</span>
+        <span class="dots"></span>
+        <span class="value">2TB SATA SSD</span>
+    </div>
+    <div class="report-row">
+        <span class="key">PLATFORM</span>
+        <span class="dots"></span>
+        <span class="value">Proxmox Virtual Environment</span>
+    </div>
+</div>
+
+            </div>
+            <div class="photo-container">
+    <img src="photo-1.jpg" alt="Hardware Setup" class="responsive-img">
+</div>
+        </section>
+
+        <section>
+            <h2>Network Bridging & Container Provisioning</h2>
+            <p>
+                With the hypervisor live, I transitioned to configuring the logical network layers and resource pools required for the help desk environment
+            </p>
+            <!-- Step 1 -->
+    <div class="log-entry">
+        <div class="log-label">LOG ENTRY 02.1: NETWORKING</div>
+        <div class="command-box">
+            # Mapping physical NIC to Linux Bridge<br>
+            # Interface: eth0 -> vmbr0
+        </div>
+        <div class="image-container">
+    <img src="LXC-setup.png" 
+         alt="Proxmox LXC Networking Configuration showing vmbr0 bridge" 
+         class="responsive-img" 
+         loading="lazy">
+</div>
+        <div class="log-desc">
+            <strong>Goal:</strong> Establishing L2 connectivity. By bridging the physical NIC to <code>vmbr0</code>, I allowed the LXC container to interface directly with my physical network for DHCP assignment.
+        </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="log-entry">
+        <div class="log-label">LOG ENTRY 02.2: RESOURCE ALLOCATION</div>
+        <div class="command-box">
+            # Defining Container Specs<br>
+            # CPU: 2 Cores | RAM: 1GB | Disk: ZFS-Mirror
+        </div>
+        <div class="image-container">
+    <img src="ct install specs.png" 
+         alt="Proxmox LXC Container creation confirmation showing CPU cores and memory allocation" 
+         class="responsive-img" 
+         loading="lazy">
+</div>
+        <div class="log-desc">
+            <strong>Goal:</strong> Performance Optimization. Utilizing an LXC instead of a full VM reduces kernel overhead. I partitioned the <strong>ZFS pool</strong> specifically for the <code>osticket-ubuntu</code> node to ensure high-speed I/O.
+        </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="log-entry">
+        <div class="log-label">LOG ENTRY 02.3: SYSTEM INITIALIZATION</div>
+        <div class="command-box">
+            # Extracting Ubuntu-24.04-Standard Template<br>
+            # Task Status: TASK OK
+        </div>
+        <div class="image-container">
+    <img src="created new ct.png" 
+         alt="Proxmox task viewer showing successful LXC container creation and TASK OK status" 
+         class="responsive-img" 
+         loading="lazy">
+</div>
+        <div class="log-desc">
+            <strong>Goal:</strong> Verification. This log confirms the creation of the logical volume and the successful deployment of the Ubuntu template. The node is now initialized and ready for application-level configuration.
+        </div>
+    </div>
+        </section>
+
+        <footer>
+            &copy; 2026 Virtualized Infrastructure Portfolio • Developed with HTML5, CSS3, & Vanilla JavaScript
+        </footer>
+    </div>
+</body>
+</html>
